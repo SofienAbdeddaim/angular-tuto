@@ -7,7 +7,7 @@ import {RecipeModel} from "../recipes.model";
   styleUrls: ['./recipes-details.component.css']
 })
 export class RecipesDetailsComponent implements OnInit {
-  @Input() recipe: RecipeModel;
+  // recipe: RecipeModel; should receive data from recipe component
   constructor() { }
 
   ngOnInit() {

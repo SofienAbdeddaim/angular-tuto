@@ -8,20 +8,11 @@ import {IngredientModel} from "../../shared/Ingredient.model";
 })
 export class ShoppingEditComponent implements OnInit {
 
-  @ViewChild('nameInput') nameInputRef: ElementRef;
-  @ViewChild('amountInput') amountInputRef: ElementRef;
-  @Output() ingredientAdded = new EventEmitter<IngredientModel>();
+  // ingredientAdded; should send data to shopping list component
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-  onAddItem() {
-    const ingName = this.nameInputRef.nativeElement.value;
-    const ingAmount = this.amountInputRef.nativeElement.value;
-    const newIngredient = new IngredientModel(ingName, ingAmount);
-    this.ingredientAdded.emit(newIngredient);
   }
 
 }
