@@ -6,9 +6,15 @@
   <div class="col-md-7">
     <app-recipes-details
       *ngIf="selectedRecipe; else infoText"
-      [recipe]="selectedRecipe"></app-recipes-details>
+      [recipe]="selectedRecipe">
+    </app-recipes-details>
     <ng-template #infoText>
-      <p>Please select a Recipe!</p>
+      <p Highlight>Please select a Recipe!</p>
+      <h1 bgColorRender2>Renderer2 directive</h1>
+      <h2 bgHostListener>bgcolor hostlistener</h2>
+      <h3 bgHostBinding>Host Binding directive</h3>
+      <h4 bgnewOne="greenyellow" [defaultValue]="'green'">
+        data binding directive</h4>
     </ng-template>
   </div>
 </div>
